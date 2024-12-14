@@ -12,7 +12,7 @@ def main():
     logging.basicConfig(level=logging.INFO)
 
     # Load proxies from file
-    proxies = load_proxies_from_file('proxies.txt')
+    proxies = load_proxies_from_file('sources.toml')
 
     # Initialize ProxyRotator
     proxy_rotator = ProxyRotator()
