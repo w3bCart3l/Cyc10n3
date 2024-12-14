@@ -14,10 +14,8 @@ def main():
     # Load proxies from file
     proxies = load_proxies_from_file('sources.toml')
 
-    # Initialize ProxyRotator
-    proxy_rotator = ProxyRotator()
-    for proxy in proxies:
-        proxy_rotator.add_proxy(proxy)
+    # Initialize ProxyRotator with the list of proxies
+    proxy_rotator = ProxyRotator(proxies)
 
     # Initialize ProxyRouter with loaded proxies
     proxy_router = ProxyRouter(proxies)

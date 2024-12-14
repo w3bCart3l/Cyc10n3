@@ -10,11 +10,14 @@ class ProxyRotator:
     A class to manage and rotate proxies.
     """
 
-    def __init__(self):
+    def __init__(self, proxies):
         """
-        Initialize the ProxyRotator with an empty list of proxies.
+        Initialize the ProxyRotator with a list of proxies.
+        
+        Args:
+            proxies (list): A list of proxy URLs.
         """
-        self.proxies = []
+        self.proxies = proxies
         self.current_proxy_index = 0
 
     def add_proxy(self, proxy):
